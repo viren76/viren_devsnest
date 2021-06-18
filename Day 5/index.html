@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Calculator</title>    
+    <script src="script.js"></script> 
+</head>
+<style>
+    
+    .form{
+
+        margin-left: 25%;
+        margin-top: 10px;
+    }
+    
+   
+     h3 {
+        margin: 30px 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        color: black;
+     }
+
+    #fnum,#snum{
+            margin: 10px 10px;
+            height: 20px;
+        
+        }
+
+    button{
+            margin: 10px 10px;
+            border-color: black;
+            width: 100px;
+            height: 30px;
+        }
+        .button-group{
+            align-items: center;
+            margin-left: 25%;
+        }
+    #result{
+        margin-left: 25%;
+        padding: 20px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+
+        <div class="form">
+                <h3> Enter first number </h3>
+    
+                <input type="number" id="fnum" name="fnum" maxlength="10" required><br><br>
+            </div>
+        <div class="form">
+               
+                <h3> Enter Second number </h3>
+                <input type="number" id="snum" name="snum" maxlength="10" required><br><br>
+            </div>
+                <p id='result'></p>
+        <div class="button-group">
+                    <button type="submit" id="add" value="+" > + Add</button>
+                    <button type="submit" id="subtract" value="-" > - Subtract</button>
+                    <button type="submit" id= "multiply" value="*" >* Multiply</button>
+                    <button type="submit" id="divide" value="/" >/ Divide</button>
+             </div>
+
+    </div>
+</body>
+</html>
