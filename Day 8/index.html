@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
 <style>
     body
     {
@@ -14,7 +16,11 @@
     }
     .container
     {
-        justify-content: space-between;
+        display: flex;
+        width: 32%;
+        height: 50px;
+        margin: auto;
+        margin-top: 120px;
     }
     .row{
             content:"";            
@@ -24,8 +30,7 @@
             width: 35px;
             height: 35px;
             float: left;   
-            background-color: red;
-            
+            background-color:grey;
             border: 1px solid black;
     }
     .selected
@@ -37,37 +42,11 @@
         left: 50%;
     }
 </style>
-<script>
-    function changeColor(e)
-    {
-        e.classList.toggle("selected");
-    }
-   var cols=document.querySelectorAll("div.col");
-   console.log(cols);
-   cols.forEach(c =>{
-        c.addEventListener('click',()=>{
-           c.classList.toggle("selected");
-        })
-    }
-)
 
-    //const div=document.createElement("div");
-    //div.classList.add("selected");
-    //console.log(cols.item);
-
-    //const m2=document.getElementsByClassName('col')
-        
-
-
-        //var div = document.getElementsByClassName("row")[0];
-
-        //cols.addEventListener('click', function () {
-        //alert('Hi!');
-
-</script>
 <body>
+    <div class="container">
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col selected"></div>    
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -83,12 +62,31 @@
         <div class="col"></div>
         <div class="col"></div>    
         <div class="col"></div>
+        <div class="col selected"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col selected"></div>
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col"></div>    
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -100,32 +98,108 @@
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div>  
-    </div>
-    <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div> 
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
+        <div class="col selected"></div>    
         <div class="col"></div>
         <div class="col"></div>  
     </div>
 
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>    
+        <div class="col"></div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col selected"></div>
+        <div class="col"></div> 
+        <div class="col selected"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>  
+    </div>
+    <div class=row>
+        <div class="col"></div>    
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -133,7 +207,7 @@
         <div class="col"></div>
         <div class="col"></div>    
         <div class="col"></div>
-        <div class="col"></div> 
+        <div class="col selected"></div> 
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -144,16 +218,16 @@
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col"></div>    
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>    
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div> 
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -163,17 +237,17 @@
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
         <div class="col"></div>    
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col selected"></div>    
         <div class="col"></div>
         <div class="col"></div> 
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -182,18 +256,18 @@
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col"></div>    
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>    
         <div class="col"></div>
         <div class="col"></div> 
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>    
@@ -201,11 +275,11 @@
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col"></div>    
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>    
         <div class="col"></div>
@@ -213,17 +287,17 @@
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>    
         <div class="col"></div>
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col"></div>    
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>    
@@ -233,15 +307,15 @@
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>    
         <div class="col"></div>
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col"></div>    
         <div class="col"></div>
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -253,13 +327,13 @@
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
-        <div class="col"></div>    
+        <div class="col selected"></div>    
         <div class="col"></div>
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
-        <div class="col"></div>
+        <div class="col"></div>    
+        <div class="col selected"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -273,11 +347,11 @@
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>    
-        <div class="col"></div>
+        <div class="col selected"></div>
         <div class="col"></div>  
     </div>
     <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
+        <div class="col selected"></div>    
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
@@ -293,83 +367,28 @@
         <div class="col"></div>
         <div class="col"></div>    
         <div class="col"></div>
-        <div class="col"></div>  
+        <div class="col selected"></div>  
     </div>
-    <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div> 
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div>  
-    </div>
-    <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div> 
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div>  
-    </div>
-    <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div> 
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div>  
-    </div>
-    <div class=row>
-        <div class="col" onclick="changeColor(this)"></div>    
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div> 
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>    
-        <div class="col"></div>
-        <div class="col"></div>  
-    </div>
+</div>
 </body>
+<script>
+    var cols=document.querySelectorAll('div.col');;
+    console.log(cols);
+    cols.forEach(c =>{
+    c.addEventListener('click',()=>{
+        if(c.classList.contains("selected")){
+            c.classList.remove("selected");
+        }
+        else{
+        c.classList.add("selected");
+        }
+    })
+ }
+)     
+//$(document).ready(function (){
+  //  $('.col').click(function(){
+    //    $(this).css("background","blue");
+    //})
+   //});
+</script>
 </html>
