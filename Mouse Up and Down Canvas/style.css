@@ -3,12 +3,30 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* body{
+    display: flex;
+    flex-direction: row-reverse;
+} */
+canvas {
+    border: 1px solid black;
+    width: 1000px;
+    height: 700px;
+    margin-left: 20px;
+  }
 .container{
     width: 100%;
     height:900px;
-    background-color:white;  
-    /* cursor:crosshair; */
+    background-color:white; 
 }
+/* .tools{
+    display: flex;
+    flex-direction: column;
+    background-color: chartreuse;
+    width: 10%;
+    height: 900px;
+    justify-content: space-around;
+    align-items: center;
+} */
 .pen{
     cursor: url('pen_demo.png'), auto;
 }
@@ -58,7 +76,9 @@
     height: 48px;
 }
 #s1{
-    height: 35px;
-    width: 35px;
+    height: 27px;
+    width: 27px;
     font-size: 20px;
+    margin-left: 5px;
+    display: none;
 }

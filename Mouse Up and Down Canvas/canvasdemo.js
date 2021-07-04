@@ -7,13 +7,8 @@ var lw=1;
 const canvas = document.getElementById("mycanvas");
 const c = canvas.getContext("2d");
 var back_col='white';
-/* var x_undo;
-var y_undo;
 
-var x_undo2;
-var y_undo2; */
-//var cont_col=document.querySelector(".container").style.backgroundColor;
-
+var col_chng;
 var slider=document.getElementById("slider");
   slider.addEventListener('input',function(){
     var p_range=document.getElementById("num_range");
@@ -30,7 +25,7 @@ canvas.addEventListener('mousedown', e => {
     x = e.offsetX;
     y = e.offsetY;
     isDrawing = true;
-    console.log("Mousedown"+x+" "+y);
+    /* console.log("Mousedown"+x+" "+y); */
 
   });
 
@@ -88,6 +83,9 @@ canvas.addEventListener('mousedown', e => {
 
     lw=1;
     back_col='white';
+    document.querySelector("#mycanvas").classList.remove("rubber");
+    document.querySelector("#mycanvas").classList.remove("pen");
+    //location.reload();
     }
   })
 
@@ -97,6 +95,11 @@ canvas.addEventListener('mousedown', e => {
   cn.forEach((cn1,e)=>{
     cn1.addEventListener('click',function(e){
       new_col=e.target.className;
+      lw=slider.value;
+      col_chng=new_col;
+      document.querySelector("#mycanvas").classList.remove("rubber");
+      document.querySelector("#mycanvas").classList.add("pen");
+
     })
   })
 
@@ -107,11 +110,13 @@ un.addEventListener('click',function(e){
 })
 
 var cp=document.getElementById("color");
+console.log(cp);
 cp.addEventListener('input',function(){
   new_col=cp.value;
+  col_chng=new_col;
 })
 var fc=document.getElementById("fill_color");
-fc.addEventListener('input',function(){
+fc.addEventListener('input',function(e){
   back_col=fc.value;
   c.fillStyle=back_col;
   c.fillRect(0,0,canvas.width,canvas.height);
@@ -119,22 +124,51 @@ fc.addEventListener('input',function(){
 
 var pen=document.querySelector(".fa-pen-nib");
 pen.addEventListener('click',function(){
-  new_col='black';
-  document.querySelector(".container").classList.remove("rubber");
-    document.querySelector(".container").classList.add("pen");
+  new_col=col_chng;
+  lw=slider.value;
+  if(document.querySelector("#mycanvas").classList.contains("pen"))
+  {
+    //console.log("contains");
+    document.querySelector("#mycanvas").classList.remove("pen");
+  }else{
+    new_col=col_chng;
+    document.querySelector("#mycanvas").classList.remove("rubber");
+    document.querySelector("#mycanvas").classList.add("pen");
+  }
+   
+    
 })
+ function change_size(){
+  lw=document.getElementById("s1").value;
+  document.querySelector("#mycanvas").classList.remove("pen");
+  document.querySelector("#mycanvas").classList.add("rubber");
+  new_col=back_col;
+  //return lw;
+} 
 
 var rub=document.querySelector(".fa-eraser");
 console.log(rub);
 rub.addEventListener('click',function(){
-    new_col=back_col;
-    document.querySelector(".container").classList.remove("pen");
-    document.querySelector(".container").classList.add("rubber");
+    if(document.querySelector("#mycanvas").classList.contains("rubber")){
+        document.querySelector("#mycanvas").classList.remove("rubber");
+        new_col=col_chng;
+        lw=slider.value;
+    }else{
+      new_col=back_col;
+      document.querySelector("#mycanvas").classList.remove("pen");
+      document.querySelector("#mycanvas").classList.add("rubber");
+    //change_size();
+    }
+    document.querySelector("#s1").style.display="inline";
+    lw=document.querySelector("#s1").value;
+        /* new_col=back_col; */
+    
 })
 
 
 document.querySelector("#down").addEventListener("click", () => {
-    if(confirm('Are you sure you want to download ?')){
+    
+  if(confirm('Are you sure you want to download ?')){
     const el = document.createElement("a");
      el.href = canvas.toDataURL();
      el.download = "image.png";
@@ -142,7 +176,4 @@ document.querySelector("#down").addEventListener("click", () => {
     }
    });
 
-   function change_size(){
-     lw=document.getElementById("s1").value+3;
-   }
-
+   
