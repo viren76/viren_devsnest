@@ -6,7 +6,14 @@
 .container{
     width: 100%;
     height:900px;
-    background-color:white;
+    background-color:white;  
+    /* cursor:crosshair; */
+}
+.pen{
+    cursor: url('pen_demo.png'), auto;
+}
+.rubber{
+    cursor: url('blue_eraser1.png'), auto;
 }
 .colors{
     display: grid;
@@ -39,4 +46,19 @@
 }
 .black{
     background-color: black;
+}
+.fa-pen-nib, .fa-eraser, .fa-download{
+    font-size: 35px; 
+}
+.fa-pen-nib:hover, .fa-eraser:hover, .fa-download:hover{
+    font-size: 40px;
+}
+#down{
+    width: 60px;
+    height: 48px;
+}
+#s1{
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
 }
