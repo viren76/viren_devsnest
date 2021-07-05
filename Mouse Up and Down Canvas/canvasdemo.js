@@ -77,12 +77,12 @@ canvas.addEventListener('mousedown', e => {
   btn_clr.addEventListener('click',function(){
     if(confirm('Are you sure you want to clear the canvas ?')){
     c.clearRect(0,0,canvas.width,canvas.height);
+    //back_col=col_chng;
     back_col='white';
+    lw=slider.value;
     c.fillStyle=back_col;
     c.fillRect(0,0,canvas.width,canvas.height);
-
-    lw=1;
-    back_col='white';
+    lw=slider.value;
     document.querySelector("#mycanvas").classList.remove("rubber");
     document.querySelector("#mycanvas").classList.remove("pen");
     //location.reload();
@@ -103,18 +103,29 @@ canvas.addEventListener('mousedown', e => {
     })
   })
 
-var un=document.querySelector(".undo");
-un.addEventListener('click',function(e){
-  console.log("Hello");
-  //c.clearRect(0,0,)
-})
 
 var cp=document.getElementById("color");
-console.log(cp);
 cp.addEventListener('input',function(){
   new_col=cp.value;
-  col_chng=new_col;
+  //col_chng=new_col;
 })
+
+/* var btn_clr=document.querySelector(".clr");
+  btn_clr.addEventListener('click',function(){
+    if(confirm('Are you sure you want to clear the canvas ?')){
+    c.clearRect(0,0,canvas.width,canvas.height);
+    back_col=col_chng;
+    lw=slider.value;
+    c.fillStyle=back_col;
+    c.fillRect(0,0,canvas.width,canvas.height);
+
+    lw=1;
+    document.querySelector("#mycanvas").classList.remove("rubber");
+    document.querySelector("#mycanvas").classList.remove("pen");
+    //location.reload();
+    }
+  }) */
+
 var fc=document.getElementById("fill_color");
 fc.addEventListener('input',function(e){
   back_col=fc.value;
@@ -135,8 +146,6 @@ pen.addEventListener('click',function(){
     document.querySelector("#mycanvas").classList.remove("rubber");
     document.querySelector("#mycanvas").classList.add("pen");
   }
-   
-    
 })
  function change_size(){
   lw=document.getElementById("s1").value;
@@ -151,18 +160,19 @@ console.log(rub);
 rub.addEventListener('click',function(){
     if(document.querySelector("#mycanvas").classList.contains("rubber")){
         document.querySelector("#mycanvas").classList.remove("rubber");
+        document.querySelector("#mycanvas").classList.add("pen");
         new_col=col_chng;
         lw=slider.value;
     }else{
       new_col=back_col;
+      document.querySelector("#s1").style.display="inline";
+      lw=document.querySelector("#s1").value;
       document.querySelector("#mycanvas").classList.remove("pen");
       document.querySelector("#mycanvas").classList.add("rubber");
     //change_size();
-    }
-    document.querySelector("#s1").style.display="inline";
-    lw=document.querySelector("#s1").value;
-        /* new_col=back_col; */
     
+        /* new_col=back_col; */
+    }
 })
 
 
