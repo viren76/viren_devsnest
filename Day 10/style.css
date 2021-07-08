@@ -72,7 +72,6 @@ body{
     height: 95%;
     border: lightcyan;
     border-radius: 10px;
-    perspective: 1000px;
     background-color: blueviolet;
     perspective: 1000px;
 }
