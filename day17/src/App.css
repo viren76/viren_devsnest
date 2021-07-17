@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height:500px;
+  overflow: auto;
+  margin: auto;
+  margin-top: 200px;
+  background-color: #2e2d2d;
+}
+.card{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 8px 5px;
+  width: 98%;
+  height: 120px;
+  background-color: rgb(98, 79, 133);
+}
+.card > h1{
+  text-decoration: underline;
+  color:rgb(91, 158, 102);
+}
+.card > h2{
+  margin-top: 20px;
+}
