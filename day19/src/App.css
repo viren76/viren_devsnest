@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+button{
+    font-size: 40px;
+    width: 72px;
+    padding: 1px;
+    margin: 5px 5px;
+}
+.App{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    width: 350px;
+}
+.App > h2{
+    padding: 5px;
+    margin: 5px;
+}
