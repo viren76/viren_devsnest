@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.AppMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+ .AppMain input{
+    padding: 10px;
+    margin: 7px;
+    font-size: 18px;
+    display: flex;
+} 
+.AppMain button{
+    font-size: 20px;
+    padding: 7px;
+    margin: 7px;
+}
+.AppMain label{
+    font-size: 20px;
+} 
+.render{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.render h2{
+    padding: 7px;
+    margin: 10px;
+}
+.FoodCal{
+    background-color: rgb(47, 156, 228);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+}
+.FoodCal h3, .FoodCal p{
+    font-size: 24px;
+    padding: 7px;
+    margin: 7px;
+}
+.FoodCal button{
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.FoodCal input{
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    display: flex;
+}
