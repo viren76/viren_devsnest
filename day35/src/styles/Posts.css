@@ -1,0 +1,92 @@
+.Posts {
+  background-color: #ffffff;
+  display: flex;
+  position: relative;
+  top:5rem;
+  flex-direction: column;
+  margin: auto;
+  padding: 5px 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.Posts .stories {
+  width: 100%;
+  height: 6rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  padding-right: 20px;
+  scrollbar-width: none;
+}
+.stories::-webkit-scrollbar{
+    display: none;
+    width: 0 !important
+}
+.fill{
+  color: rgba(233, 22, 22, 0.904);
+}
+.Posts .stories .story {
+  border: 3px solid rgb(255, 69, 56);
+  width: 65px;
+  height: 65px;
+  margin: 10px 8px;
+  border-radius: 50%;
+  align-items: center;
+  
+}
+.Posts .stories .story img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+}
+.Posts .post {
+  width: 100%;
+  display: flex;
+  padding: 10px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.Posts .post .Card{
+    width: 40rem;
+    height: 40rem;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.Posts .post .Card .title{
+    font-size: 1.8rem;
+    margin: 5px 0px;
+    padding: 5px 20px;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Posts .post .Card .title i,h4{
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.795);
+}
+.Posts .post .Card img{
+    width: 100%;
+    height: 85%;
+}
+.Posts .post .Card .buttons{
+    width: 100%;
+    height: 7%;
+    display: flex;
+}
+.Posts .post .Card .buttons i{
+    font-size: 1.8rem;
+    margin: 8px 10px;
+    cursor: pointer;
+}
